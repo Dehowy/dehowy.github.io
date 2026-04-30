@@ -22,7 +22,7 @@
 
     "_comment": "添加一个“+”投稿按钮，指向issue页面",
     "iconList": {"issue": "M12 5v14M5 12h14"},
-    "exlink": {"issue": "https://github.com/Dehowy/dehowy.github.io/issues/new"}
+    "exlink": {"issue": "https://github.com/Dehowy/dehowy.github.io/issues/new"},
     
     "_comment": ""
 }
