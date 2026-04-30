@@ -1,7 +1,17 @@
 name: build Gmeek
 
 on:
+  # 手动触发
   workflow_dispatch:
+
+
+  # 仅当 config.json 文件被修改并 push 时触发
+  push:
+    branches:
+      - main
+    paths:
+      - 'config.json'
+  
   issues:
     types: [opened, edited]
   schedule:
