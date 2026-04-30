@@ -16,6 +16,9 @@
 
     "_comment": "自定义独立页面",
     "singlePage":["about"],
+
+    "_comment": "全站添加Vercount插件",
+    "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
     
     "_comment": "结尾行，请在上方修改配置文件"
 }
