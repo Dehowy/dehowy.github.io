@@ -1,6 +1,16 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
+    "_comment": "博客主标题",
+    "title":"海大·史记",
+
+    "_comment": "博客副标题/个人签名",
+    "subTitle":"乐子神在上！",
+
+    "_comment": "博客头像URL",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
-    "GMEEK_VERSION":"last"
+
+    "_comment": "框架版本，last=自动使用最新版",
+    "GMEEK_VERSION":"last",
+
+    "_comment": "起始日期，用于页面底部显示网站运行天数",
+    "startSite":"04/30/2026",
 }
