@@ -19,6 +19,10 @@
 
     "_comment": "全站添加Vercount插件",
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
+
+    "_comment": "添加一个“+”投稿按钮，指向issue页面",
+    "iconList": {"issue": "M12 5v14M5 12h14"},
+    "exlink": {"issue": "https://github.com/Dehowy/dehowy.github.io/issues/new"}
     
-    "_comment": "结尾行，请在上方修改配置文件"
+    "_comment": ""
 }
