@@ -21,7 +21,7 @@
     "allHead":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>",
 
     "_comment": "添加一个“+”投稿按钮，指向issue页面",
-    "iconList": {"issue": "M12 5v14M5 12h14"},
+    "iconList": {"issue": "M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0ZM1.5 8a6.5 6.5 0 1 0 13 0 6.5 6.5 0 0 0-13 0Zm7.25-3.25v2.5h2.5a.75.75 0 0 1 0 1.5h-2.5v2.5a.75.75 0 0 1-1.5 0v-2.5h-2.5a.75.75 0 0 1 0-1.5h2.5v-2.5a.75.75 0 0 1 1.5 0Z"},
     "exlink": {"issue": "https://github.com/Dehowy/dehowy.github.io/issues/new"},
     
     "_comment": ""
