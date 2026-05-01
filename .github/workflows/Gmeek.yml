@@ -13,7 +13,7 @@ on:
       - 'config.json'
   
   issues:
-    types: [opened, edited]
+    types: [labeled]
   schedule:
     - cron: "0 16 * * *"
     
@@ -51,6 +51,22 @@ jobs:
           lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
           if [ $GMEEK_VERSION == 'last' ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;
 
+      - name: Patch Gmeek for label filtering
+        run: |
+          python3 -c "
+          gmeek_path = '/opt/Gmeek/Gmeek.py'
+          with open(gmeek_path, 'r') as f:
+              content = f.read()
+          old = 'for issue in issues:'
+          new = '''for issue in issues:
+                if not any(label.name in ('投稿通过','approved') for label in issue.labels):
+                    continue'''
+          content = content.replace(old, new, 1)
+          with open(gmeek_path, 'w') as f:
+              f.write(content)
+          print('Patch applied: label filtering added to runAll')
+          "
+
       - name: Install dependencies
         run: |
           pip install --upgrade pip
@@ -58,6 +74,13 @@ jobs:
 
       - name: Generate new html
         run: |
+          if [ "${{ github.event_name }}" == "issues" ]; then
+            if [ "${{ github.event.label.name }}" != "投稿通过" ]; then
+              echo "Label '${{ github.event.label.name }}' is not '投稿通过', skipping build"
+              exit 0
+            fi
+            echo "Label '投稿通过' detected, proceeding with build"
+          fi
           cp -r ./* /opt/Gmeek/
           cd /opt/Gmeek/
           python Gmeek.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
