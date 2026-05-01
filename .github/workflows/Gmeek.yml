@@ -64,8 +64,8 @@ jobs:
               new_lines.append(line)
               if not patched and re.match(r'^(\s*)for issue in issues:', line):
                   indent = re.match(r'^(\s*)', line).group(1)
-                  new_lines.append(indent + "if not any(label.name in ('投稿通过','approved') for label in issue.labels):\n")
-                  new_lines.append(indent + "    continue\n")
+                  new_lines.append(indent + "    if not any(label.name in ('投稿通过','approved') for label in issue.labels):\n")
+                  new_lines.append(indent + "        continue\n")
                   patched = True
           with open(gmeek_path, "w") as f:
               f.writelines(new_lines)
