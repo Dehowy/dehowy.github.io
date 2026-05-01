@@ -53,19 +53,24 @@ jobs:
 
       - name: Patch Gmeek for label filtering
         run: |
-          python3 -c "
-          gmeek_path = '/opt/Gmeek/Gmeek.py'
-          with open(gmeek_path, 'r') as f:
-              content = f.read()
-          old = 'for issue in issues:'
-          new = '''for issue in issues:
-                if not any(label.name in ('投稿通过','approved') for label in issue.labels):
-                    continue'''
-          content = content.replace(old, new, 1)
-          with open(gmeek_path, 'w') as f:
-              f.write(content)
-          print('Patch applied: label filtering added to runAll')
-          "
+          python3 << 'PYEOF'
+          import re
+          gmeek_path = "/opt/Gmeek/Gmeek.py"
+          with open(gmeek_path, "r") as f:
+              lines = f.readlines()
+          new_lines = []
+          patched = False
+          for line in lines:
+              new_lines.append(line)
+              if not patched and re.match(r'^(\s*)for issue in issues:', line):
+                  indent = re.match(r'^(\s*)', line).group(1)
+                  new_lines.append(indent + "if not any(label.name in ('投稿通过','approved') for label in issue.labels):\n")
+                  new_lines.append(indent + "    continue\n")
+                  patched = True
+          with open(gmeek_path, "w") as f:
+              f.writelines(new_lines)
+          print(f"Patch applied: {patched}")
+          PYEOF
 
       - name: Install dependencies
         run: |
