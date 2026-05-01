@@ -17,7 +17,7 @@
     "_comment": "自定义独立页面",
     "singlePage":["about"],
 
-    "_comment": "关闭文章页面的issue按钮"
+    "_comment": "关闭文章页面的issue按钮",
     "showPostSource":0,
 
     "_comment": "全站添加Vercount插件",
