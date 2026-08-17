@@ -1,12 +1,12 @@
 {
     "_comment": "博客主标题",
-    "title":"时间·捡史",
+    "title":"海南大学·机械通",
 
     "_comment": "博客副标题/个人签名",
-    "subTitle":"Abiogenesis.",
+    "subTitle":"这里收集着各类海大机械专属的资料/攻略 若能给到你些许帮助 深感荣幸！",
 
     "_comment": "博客头像URL",
-    "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
+    "avatarUrl":"https://github.com/Dehowy/dehowy.github.io/blob/main/%E5%8D%9A%E5%AE%A2%E5%A4%B4%E5%83%8F.png",
 
     "_comment": "框架版本，last=自动使用最新版",
     "GMEEK_VERSION":"last",
