@@ -12,8 +12,7 @@
 
 
 > 下载资源：在开始安装教程之前，请先下载好软件安装包
-[Github Releases 自释放程序（极为推荐，速度快，双击解压）](url)
-[Github Releases 分卷压缩（一般推荐，速度快，请确保你知道如何使用分卷压缩）](url)
+[Github Releases 自释放程序（极为推荐，速度快，双击解压）](https://github.com/Dehowy/dehowy.github.io/releases/tag/AutoCAD)
 [夸克网盘（不推荐，速度慢）](https://pan.quark.cn/s/96fa9733ff4c#/list/share)
 [迅雷网盘（不推荐，速度极慢）](https://pan.xunlei.com/s/VOuUvHd8n8oVNihOvnuZ66y0A1?pwd=kcbw)
 
