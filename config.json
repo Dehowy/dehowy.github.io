@@ -6,7 +6,7 @@
     "subTitle":"这里收集着各类海大机械专属的资料/攻略 若能给到你些许帮助 深感荣幸！",
 
     "_comment": "博客头像URL",
-    "avatarUrl":"https://github.com/Dehowy/dehowy.github.io/blob/main/touxiang.svg",
+    "avatarUrl": "https://raw.githubusercontent.com/Dehowy/dehowy.github.io/main/touxiang.svg"
 
     "_comment": "框架版本，last=自动使用最新版",
     "GMEEK_VERSION":"last",
