@@ -30,6 +30,10 @@
     "_comment": "添加一个TOC目录",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script>",
 
+    "_comment": "灯箱插件",
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
+
+
     
     "_comment": ""
 }
